@@ -31,7 +31,7 @@ switch(value) {
     case '-':
     case '*':
     case '/':
-      if(lastValueIsOperator) return; // проверяем, что предыдущий символ не является оператором
+      if(lastValueIsOperator) return; // проверяем, что предыдущий символ не является математической операцией 
       result.innerText += value; 
       lastValueIsOperator = true; // устанавливаем флаг
       break;
