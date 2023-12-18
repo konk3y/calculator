@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Departura";
+  src: url(fonts/Departura.ttf);
+}
+
+@font-face {
+  font-family: "Hero";
+  src: url(fonts/Hero.ttf)
+}
+
+@font-face {
+  font-family: 'LCHairline';
+  src: url(fonts/LCHairline.ttf);
+}
+
+@font-face {
+  font-family: 'RalewayVar';
+  src: url(fonts/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family:'RalewayItalic' ;
+  src: url(fonts/Raleway-Italic-VariableFont_wght.ttf);
+}
+
+* {
+  box-sizing: border-box; /* Фиксирует див, плюс не нужно подгонять каждый параметр, если они записаны в разных единицаз измерений + сбрасываем изначальные стили */
+}
+
+ body {
+    margin: 0; /* Велечина отсупа от каждого края элемента */
+    min-height: 100vh; /* минимальная высота элемента */
+  background: #3494e6; 
+  background: -webkit-linear-gradient(to top, #3494e6, #ec6ead); 
+  background: linear-gradient(to top, #3494e6, #ec6ead); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center; /*Чтобы все было в центре и было ровно */
+    align-items: center; 
+  }
+
+.All{
+  width: 350px; /* общая ширина */
+  border: solid 3px; color: rgba(39, 30, 37, 0);  /* граница блока калькулятора */
+  border-radius: 5px; /* радиус скругления */
+  background: #2193b0; 
+  background: -webkit-linear-gradient(to bottom, #2193b0, #6dd5ed);
+  background: linear-gradient(to bottom, #2193b0, #6dd5ed);
+  padding: 20px; /* внутреняя граница блока */
+  font-size: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr); /* устнавливаем для каждой кнопки одинаковый размер*/
+  grid-auto-rows: 60px;  /* размер для всех рядов по умолчанию */
+  gap: 9px;  /* расстояние между кнопками */
+}
+
+.button{
+
+  border: none;
+  border-radius: 3px;
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to left, #ece9e6, #ffffff);
+  background: linear-gradient(to left, #ece9e6, #ffffff);
+  cursor: pointer;
+
+  font-size: 26px;  
+  font-family: 'Hero';
+}
+
+.equal { 
+  color: #3a11ee;  
+  grid-column: 4 / -1; /* перемещаем кнопку */
+}
+
+.reset {
+  color:rgb(255, 148, 60);
+}
+
+.button:hover {
+  opacity: 0.75;
+  color: #730bfa;
+}
+
+.button:active {
+  transform: scale(0.95); /* уменьшаем кнопку, имитируя ее нажатие */
+ box-shadow: 3px 2px 22px 1px rgba(235, 230, 230, 0.514);
+}
+
+.output_result {
+  grid-column: 1 / -1;
+  border: solid 2px;
+    color: #f7f3f3;
+    font-size: 45px;
+    padding: 1px;
+    font-family: 'Hero';
+    text-align: center;
+}
+
+.pic {
+  grid-column: 2 / -2;
+  background-color:rgba(255, 255, 255, 0);
+  color: azure;
+  font-size: 23px;
+  font-family: 'Hero'; /* Hero или RalewayVar? */
+  display: grid;
+  text-align: center;
+  align-items: center; 
+}
+
+
+
